@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
@@ -51,7 +52,7 @@ public class Simulateur implements Initializable {
 		++nbElements;
 		Personne p = new Personne("P" + nbElements, x, y, COLS[nbElements % COLS.length]);
 		contenu.getChildren().add(p.getMaForme());
-		p.setOnMouseClicked(this::mouseClicked);
+		p.getMaForme().setOnMouseClicked(this::mouseClicked);
 	}
 
 	/**
@@ -97,7 +98,7 @@ public class Simulateur implements Initializable {
 	 * @see MenuItem#getOnAction()
 	 */
 	public void deplacer(ActionEvent event) {
-		}
+
 	}
 
 	/**
